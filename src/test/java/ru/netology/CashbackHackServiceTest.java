@@ -1,12 +1,11 @@
 package ru.netology;
 
-import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
     @Test
-    void shouldCalculateMissingQty() {
+    public void shouldCalculateMissingQty() {
         CashbackHackService service = new CashbackHackService();
         int amount = 999;
         int expected = 1;
@@ -15,7 +14,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void amountEqualBoundary() {
+    public void amountEqualBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
         int expected = 0;
@@ -24,7 +23,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    void amountMoreBoundary() {
+    public void amountMoreBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1001;
         int expected = 999;
